@@ -88,7 +88,7 @@ function exportSave() {
 function importSave() {
     try {
 
-        if (confirm("Are you sure you want to import this save?")) {
+        if (confirm("您确定要导入此保存吗?")) {
             let base64Save = $("#exportImportArea").val();
             let decryptedSave = atob(base64Save);
             if (decryptedSave.includes("gameVersion")) {
@@ -515,7 +515,7 @@ function load(button, prestigeCheck, firstLoad) {
 }
 
 function reset() {
-    if (confirm("Are you sure you want to reset your save data?")) {
+    if (confirm("您确定要重置您的保存数据吗?")) {
         localStorage.removeItem(saveName);
 
         stats = JSON.parse(JSON.stringify(baseStats));
@@ -1690,7 +1690,7 @@ function setupLiftingCurlsTimer() {
 
 function newGym(type) {
     if (checks.isPrestige) {
-        if (confirm("Are you sure you want to select this type of gym?")) {
+        if (confirm("您确定要选择这种类型的健身房吗?")) {
             checks.isPrestige = false;
             // points
             prestige.current += prestige.total + 1
